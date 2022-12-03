@@ -1,21 +1,27 @@
 .realtors{
     background-color: $color-secondary;
     grid-column: col-start 7 / full-end;
+    padding: 3rem;
 
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 2rem;
+    justify-content: center;
 
 
     &__list{
         display: grid;
         grid-template-columns: min-content max-content;
-        grid-template-rows: 2rem;
-        grid-row-gap: 5vh; // to look on large screen
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh; // to look good on large screen
         align-items: center;
     }
 
     &__img{
         width: 7rem;
         border-radius: 50%;
-        display: block;
+        display: block; // we always use display images as block element
     }
 
     &__sold{
