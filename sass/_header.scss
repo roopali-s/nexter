@@ -8,7 +8,7 @@
     padding-top: 6rem;
     
     display: grid;
-    grid-template-rows: 1fr min-content 6rem 1fr;
+    grid-template-rows: 1fr min-content minmax(6rem,min-content) 1fr;
     grid-template-columns: minmax(max-content);
     grid-row-gap: 1.5rem;
     justify-content: center;
@@ -50,7 +50,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 3rem;
         justify-items: center;
-
+        align-items: center;
 
         img{
             max-height: 2.5rem;
