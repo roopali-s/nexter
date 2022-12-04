@@ -17,6 +17,8 @@ $font-display: 'Josefin Sans', sans-serif;
 // RESPONSIVE BREAKPOINT
 $bp-largest: 75em; //   1200 / 16 = 75
 $bp-large: 62.5em; //1000px / 16 = 62.5
+$bp-medium: 50em; //800/16 = 50
+$bp-small : 37.5em; // 600px 
 
 *,
 *::before,
@@ -49,8 +51,14 @@ body{
 
     @media only screen and(max-width:$bp-large){
         grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax
-        (min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; 
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]
         
+    }
+
+    @media only screen and(max-width:$bp-medium){
+        //grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);     
+        grid-template-rows: 6rem calc(100vh - 6rem); // we delated "min-content min-content min-content repeat(3, min-content)" from above line because bedefault it uses min-content only.
+
+
     }
 }
